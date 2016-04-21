@@ -1,0 +1,41 @@
+C:\Users\watkinsj\documents\visual studio 2015\Projects\Final Projectish\Final Projectish\bin\ApplicationInsights.config
+C:\Users\watkinsj\documents\visual studio 2015\Projects\Final Projectish\Final Projectish\bin\roslyn\csc.exe
+C:\Users\watkinsj\documents\visual studio 2015\Projects\Final Projectish\Final Projectish\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\watkinsj\documents\visual studio 2015\Projects\Final Projectish\Final Projectish\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\watkinsj\documents\visual studio 2015\Projects\Final Projectish\Final Projectish\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\watkinsj\documents\visual studio 2015\Projects\Final Projectish\Final Projectish\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\watkinsj\documents\visual studio 2015\Projects\Final Projectish\Final Projectish\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\watkinsj\documents\visual studio 2015\Projects\Final Projectish\Final Projectish\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\watkinsj\documents\visual studio 2015\Projects\Final Projectish\Final Projectish\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\watkinsj\documents\visual studio 2015\Projects\Final Projectish\Final Projectish\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\watkinsj\documents\visual studio 2015\Projects\Final Projectish\Final Projectish\bin\roslyn\vbc.exe
+C:\Users\watkinsj\documents\visual studio 2015\Projects\Final Projectish\Final Projectish\bin\roslyn\VBCSCompiler.exe
+C:\Users\watkinsj\documents\visual studio 2015\Projects\Final Projectish\Final Projectish\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\watkinsj\documents\visual studio 2015\Projects\Final Projectish\Final Projectish\bin\Final Projectish.dll.config
+C:\Users\watkinsj\documents\visual studio 2015\Projects\Final Projectish\Final Projectish\bin\Final Projectish.dll
+C:\Users\watkinsj\documents\visual studio 2015\Projects\Final Projectish\Final Projectish\bin\Final Projectish.pdb
+C:\Users\watkinsj\documents\visual studio 2015\Projects\Final Projectish\Final Projectish\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\watkinsj\documents\visual studio 2015\Projects\Final Projectish\Final Projectish\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\watkinsj\documents\visual studio 2015\Projects\Final Projectish\Final Projectish\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\watkinsj\documents\visual studio 2015\Projects\Final Projectish\Final Projectish\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\watkinsj\documents\visual studio 2015\Projects\Final Projectish\Final Projectish\bin\Microsoft.AI.Web.dll
+C:\Users\watkinsj\documents\visual studio 2015\Projects\Final Projectish\Final Projectish\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\watkinsj\documents\visual studio 2015\Projects\Final Projectish\Final Projectish\bin\Microsoft.ApplicationInsights.dll
+C:\Users\watkinsj\documents\visual studio 2015\Projects\Final Projectish\Final Projectish\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\watkinsj\documents\visual studio 2015\Projects\Final Projectish\Final Projectish\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\watkinsj\documents\visual studio 2015\Projects\Final Projectish\Final Projectish\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\watkinsj\documents\visual studio 2015\Projects\Final Projectish\Final Projectish\bin\Microsoft.AI.Web.xml
+C:\Users\watkinsj\documents\visual studio 2015\Projects\Final Projectish\Final Projectish\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\watkinsj\documents\visual studio 2015\Projects\Final Projectish\Final Projectish\bin\Microsoft.ApplicationInsights.xml
+C:\Users\watkinsj\documents\visual studio 2015\Projects\Final Projectish\Final Projectish\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\watkinsj\documents\visual studio 2015\Projects\Final Projectish\Final Projectish\obj\Debug\Final Projectish.dll
+C:\Users\watkinsj\documents\visual studio 2015\Projects\Final Projectish\Final Projectish\obj\Debug\Final Projectish.pdb
+C:\Users\watkinsj\Documents\Visual Studio 2015\Projects\Final Projectish\Final Projectish\obj\Debug\Final Projectish.csprojResolveAssemblyReference.cache
+C:\Users\watkinsj\Documents\Visual Studio 2015\Projects\Final Projectish\Final Projectish\bin\Newtonsoft.Json.dll
+C:\Users\watkinsj\Documents\Visual Studio 2015\Projects\Final Projectish\Final Projectish\bin\System.Net.Http.Formatting.dll
+C:\Users\watkinsj\Documents\Visual Studio 2015\Projects\Final Projectish\Final Projectish\bin\System.Web.Http.dll
+C:\Users\watkinsj\Documents\Visual Studio 2015\Projects\Final Projectish\Final Projectish\bin\System.Web.Http.WebHost.dll
+C:\Users\watkinsj\Documents\Visual Studio 2015\Projects\Final Projectish\Final Projectish\bin\Newtonsoft.Json.xml
+C:\Users\watkinsj\Documents\Visual Studio 2015\Projects\Final Projectish\Final Projectish\bin\System.Net.Http.Formatting.xml
+C:\Users\watkinsj\Documents\Visual Studio 2015\Projects\Final Projectish\Final Projectish\bin\System.Web.Http.xml
+C:\Users\watkinsj\Documents\Visual Studio 2015\Projects\Final Projectish\Final Projectish\bin\System.Web.Http.WebHost.xml
