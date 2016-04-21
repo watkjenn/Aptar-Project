@@ -8,7 +8,7 @@
 </head>
 <body bgcolor="#Z7Z6ZZ">
      <form id="form1" runat="server">
-    <h1 style ="Color:turquoise">Welcome to the phone store!</h1>
+    <h1 style ="Color:turquoise">Welcomes to the phone store!</h1>
     <p style ="Color:turquoise">This is a store where you are able to pick out a brand of phone. Thank you for joining us.</p>
     
     <asp:Table runat="server" >  
