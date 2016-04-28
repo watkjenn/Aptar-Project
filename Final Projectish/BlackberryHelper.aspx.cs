@@ -16,6 +16,7 @@ namespace Final_Projectish
 
         public void SubmitButton_CLick(object sender, EventArgs e)
         {
+
             Response.Redirect("~/SubmitPage.aspx");
         }
     }
