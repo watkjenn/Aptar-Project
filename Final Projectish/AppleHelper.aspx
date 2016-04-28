@@ -16,15 +16,15 @@
         <h4 style="color:turquoise;">Last name:<br/></h4>
         <input type="text" name="lastname" id="ln" runat="server"/><br/>
         <h4 style="color:turquoise;">Address:<br/></h4>
-        <input type="text" name="address"id="ad" runat="server"/><br/>
+        <input type="text" name="address" id="ad" runat="server"/><br/>
         <h4 style="color:turquoise;">Credit Card Number:<br/></h4>
-        <input type="text" name="creditCard"id="cc" runat="server"/><br/>
+        <input type="text" name="creditCard" id="cc" runat="server"/><br/>
         <h4 style="color:turquoise;">Cardholder's name:<br/></h4>
-        <input type="text" name="cardholderName"id="ch" runat="server"/><br/>
+        <input type="text" name="cardholderName" id="ch" runat="server"/><br/>
         <h4 style="color:turquoise;">Expiration Date:<br/></h4>
-        <input type="text" name="expDate"id="ed" runat="server"/><br/>
+        <input type="text" name="expDate" id="ed" runat="server"/><br/>
         <h4 style="color:turquoise;">Mobile number:<br/></h4>
-        <input type="text" name="mobileNumber"id="mnum" runat="server"/><br/>
+        <input type="text" name="mobileNumber" id="mnum" runat="server"/><br/>
         <h4 style =" Color:turquoise;">Would you like to buy a plan along with your phone? This will be an additional $300.00.</h4><br/>
         <input type="text" name="phonePlan" id="pp" runat="server" />
         <br/>
