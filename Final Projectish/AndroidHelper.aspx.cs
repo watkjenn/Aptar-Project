@@ -16,6 +16,8 @@ namespace Final_Projectish
 
         public void SubmitButton_CLick(object sender, EventArgs e)
         {
+            var adapter = new Data.PhoneDBTableAdapters.BuyPhoneTableAdapter();
+            adapter.Insert("Android", fn, ln, ad, cc, ch, ed, mnum, pp);
             Response.Redirect("~/SubmitPage.aspx");
         }
     }
