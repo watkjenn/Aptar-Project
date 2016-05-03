@@ -279,6 +279,8 @@ namespace Final_Projectish.Data {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class BuyPhoneDataTable : global::System.Data.TypedTableBase<BuyPhoneRow> {
             
+            private global::System.Data.DataColumn columnID;
+            
             private global::System.Data.DataColumn columntypePhone;
             
             private global::System.Data.DataColumn columnfirstName;
@@ -328,6 +330,14 @@ namespace Final_Projectish.Data {
             protected BuyPhoneDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IDColumn {
+                get {
+                    return this.columnID;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -439,9 +449,10 @@ namespace Final_Projectish.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BuyPhoneRow AddBuyPhoneRow(string typePhone, string firstName, string lastName, string adress, string creditCard, string cardHolder, string experationDate, string phoneNumber, string phonePlan) {
+            public BuyPhoneRow AddBuyPhoneRow(int ID, string typePhone, string firstName, string lastName, string adress, string creditCard, string cardHolder, string experationDate, string phoneNumber, string phonePlan) {
                 BuyPhoneRow rowBuyPhoneRow = ((BuyPhoneRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        ID,
                         typePhone,
                         firstName,
                         lastName,
@@ -473,6 +484,7 @@ namespace Final_Projectish.Data {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
+                this.columnID = base.Columns["ID"];
                 this.columntypePhone = base.Columns["typePhone"];
                 this.columnfirstName = base.Columns["firstName"];
                 this.columnlastName = base.Columns["lastName"];
@@ -487,6 +499,8 @@ namespace Final_Projectish.Data {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
+                this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID);
                 this.columntypePhone = new global::System.Data.DataColumn("typePhone", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntypePhone);
                 this.columnfirstName = new global::System.Data.DataColumn("firstName", typeof(string), null, global::System.Data.MappingType.Element);
@@ -505,6 +519,7 @@ namespace Final_Projectish.Data {
                 base.Columns.Add(this.columnphoneNumber);
                 this.columnphonePlan = new global::System.Data.DataColumn("phonePlan", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnphonePlan);
+                this.columnID.AllowDBNull = false;
                 this.columntypePhone.MaxLength = 255;
                 this.columnfirstName.MaxLength = 255;
                 this.columnlastName.MaxLength = 255;
@@ -652,6 +667,17 @@ namespace Final_Projectish.Data {
             internal BuyPhoneRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tableBuyPhone = ((BuyPhoneDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int ID {
+                get {
+                    return ((int)(this[this.tableBuyPhone.IDColumn]));
+                }
+                set {
+                    this[this.tableBuyPhone.IDColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1066,6 +1092,7 @@ namespace Final_Projectish.Data.PhoneDBTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "BuyPhone";
+            tableMapping.ColumnMappings.Add("ID", "ID");
             tableMapping.ColumnMappings.Add("typePhone", "typePhone");
             tableMapping.ColumnMappings.Add("firstName", "firstName");
             tableMapping.ColumnMappings.Add("lastName", "lastName");
@@ -1078,8 +1105,9 @@ namespace Final_Projectish.Data.PhoneDBTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[BuyPhone] ([typePhone], [firstName], [lastName], [adress], [creditCard], [cardHolder], [experationDate], [phoneNumber], [phonePlan]) VALUES (@typePhone, @firstName, @lastName, @adress, @creditCard, @cardHolder, @experationDate, @phoneNumber, @phonePlan)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[BuyPhone] ([ID], [typePhone], [firstName], [lastName], [adress], [creditCard], [cardHolder], [experationDate], [phoneNumber], [phonePlan]) VALUES (@ID, @typePhone, @firstName, @lastName, @adress, @creditCard, @cardHolder, @experationDate, @phoneNumber, @phonePlan)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@typePhone", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "typePhone", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@firstName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "firstName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@lastName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "lastName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1101,12 +1129,18 @@ namespace Final_Projectish.Data.PhoneDBTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT typePhone, firstName, lastName, adress, creditCard, cardHolder, experation" +
-                "Date, phoneNumber, phonePlan FROM dbo.BuyPhone";
+            this._commandCollection[0].CommandText = "SELECT ID, typePhone, firstName, lastName, adress, creditCard, cardHolder, expera" +
+                "tionDate, phoneNumber, phonePlan FROM dbo.BuyPhone";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT ID, typePhone, firstName, lastName, adress, creditCard, cardHolder, expera" +
+                "tionDate, phoneNumber, phonePlan FROM dbo.BuyPhone where ID = @ID";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1128,6 +1162,18 @@ namespace Final_Projectish.Data.PhoneDBTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual PhoneDB.BuyPhoneDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            PhoneDB.BuyPhoneDataTable dataTable = new PhoneDB.BuyPhoneDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual PhoneDB.BuyPhoneDataTable GetDataByID(int ID) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(ID));
             PhoneDB.BuyPhoneDataTable dataTable = new PhoneDB.BuyPhoneDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -1166,60 +1212,61 @@ namespace Final_Projectish.Data.PhoneDBTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string typePhone, string firstName, string lastName, string adress, string creditCard, string cardHolder, string experationDate, string phoneNumber, string phonePlan) {
+        public virtual int Insert(int ID, string typePhone, string firstName, string lastName, string adress, string creditCard, string cardHolder, string experationDate, string phoneNumber, string phonePlan) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID));
             if ((typePhone == null)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(typePhone));
-            }
-            if ((firstName == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(firstName));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(typePhone));
             }
-            if ((lastName == null)) {
+            if ((firstName == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(lastName));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(firstName));
             }
-            if ((adress == null)) {
+            if ((lastName == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(adress));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(lastName));
             }
-            if ((creditCard == null)) {
+            if ((adress == null)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(creditCard));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(adress));
             }
-            if ((cardHolder == null)) {
+            if ((creditCard == null)) {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(cardHolder));
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(creditCard));
             }
-            if ((experationDate == null)) {
+            if ((cardHolder == null)) {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(experationDate));
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(cardHolder));
             }
-            if ((phoneNumber == null)) {
+            if ((experationDate == null)) {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(phoneNumber));
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(experationDate));
             }
-            if ((phonePlan == null)) {
+            if ((phoneNumber == null)) {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(phonePlan));
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(phoneNumber));
+            }
+            if ((phonePlan == null)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(phonePlan));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1234,6 +1281,69 @@ namespace Final_Projectish.Data.PhoneDBTableAdapters {
                 if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
                     this.Adapter.InsertCommand.Connection.Close();
                 }
+            }
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class MaxIDTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.IDbCommand[] _commandCollection;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.IDbCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.IDbCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Connection = new global::System.Data.SqlClient.SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["HsProjectConnectionString"].ConnectionString);
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).CommandText = "Select Max(ID) from BuyPhone";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual global::System.Nullable<int> GetMaxID() {
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[0]));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return new global::System.Nullable<int>();
+            }
+            else {
+                return new global::System.Nullable<int>(((int)(returnValue)));
             }
         }
     }
