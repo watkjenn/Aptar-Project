@@ -11,7 +11,9 @@ namespace Final_Projectish
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            var custID = Request.QueryString["ID"];
+            var adapter = new Data.PhoneDBTableAdapters.BuyPhoneTableAdapter();
+            var data = adapter.GetDataByID(int.Parse(custID));
         }
     }
 }
